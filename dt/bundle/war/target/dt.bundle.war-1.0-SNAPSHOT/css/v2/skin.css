@@ -1,0 +1,186 @@
+.S_spetxt, .S_error {
+    color: #E44443;
+}
+.S_func1:hover {
+    text-decoration: none;
+}
+#js_homeskin_public_base {
+    height: 42px;
+}
+#js_skin_public_base {
+    height: 42px;
+}
+body {
+    /* chenjw edit background-color: #B9E6EB;*/
+    background-color: #EEE;
+    /* chenjw edit background-image: url("images/body_repeat.png?id=1348554801578");*/
+    background-repeat: repeat-x;
+}
+body, .S_txt1, .S_func1, .SW_fun .S_func1, .SW_fun2 .S_func3, .current .S_func1:hover, .W_btn_b span, .W_btn_c span, .W_btn_e span, .W_btn_f span, .W_btn_round span, .W_btn_round2 span, .W_btn_round_ico span, .W_btn_arrow span {
+    color: #333333;
+    text-decoration: none;
+}
+.S_txt1_bg {
+    background-color: #333333;
+}
+.S_txt1_br {
+    border-color: #333333;
+}
+.S_txt2, .SW_fun2:hover .S_txt3 {
+    color: #808080;
+}
+.S_txt2_bg {
+    background-color: #808080;
+}
+.S_txt2_br {
+    border-color: #808080;
+}
+.S_txt3 {
+    color: #AEAEAE;
+}
+.S_txt3_bg {
+    background-color: #AEAEAE;
+}
+.S_txt3_br {
+    border-color: #AEAEAE;
+}
+.S_txt4, .W_btn_a_disable span, .W_btn_a_disable:hover span, .W_btn_b_disable span, .W_btn_b_disable:hover span, .W_btn_c_disable span, .W_btn_c_disable:hover span, .W_btn_d_disable span, .W_btn_d_disable:hover span, .W_btn_e_disable span, .W_btn_e_disable:hover span, .W_btn_f_disable span, .W_btn_f_disable:hover span {
+    color: #CCCCCC;
+}
+.S_txt4_bg {
+    background-color: #CCCCCC;
+}
+.S_txt4_br {
+    border-color: #CCCCCC;
+}
+a, .S_link1, .S_func1:hover, .SW_fun:hover .S_func1, .SW_fun2:hover .S_func3, .SW_fun2:hover .S_func4 {
+    color: #14A0CD;
+}
+.S_link1_bg {
+    background-color: #14A0CD;
+}
+.S_link1_br {
+    border-color: #14A0CD;
+}
+.S_link2, .SW_fun2:hover .S_func2 {
+    color: #78C8E1;
+}
+.S_link2_bg {
+    background-color: #78C8E1;
+}
+.S_link2_br {
+    border-color: #78C8E1;
+}
+.S_link3, .SW_fun2 .S_func2, .SW_fun2 .S_func4 {
+    color: #C7E5EF;
+}
+.S_link3_bg {
+    background-color: #C7E5EF;
+}
+.S_link3_br {
+    border-color: #C7E5EF;
+}
+.S_bg1, a.W_gotop {
+    background-color: #F7F7F7;
+}
+.S_bg1_c {
+    color: #F7F7F7;
+}
+.S_bg2, .WB_left_nav .lev a:hover, .WB_left_nav .lev2 a:hover, .WB_left_nav .lev2 a.lev_curr, .WB_left_nav .lev2 a.lev_curr:hover, .WB_left_nav .lev_edit .lev a:hover {
+    background-color: #D7EBF0;
+}
+.S_bg2_c {
+    color: #D7EBF0;
+}
+.S_bg3, .WB_left_nav .levmenu .lm_li:hover {
+    background-color: #B9DCE6;
+}
+.S_bg3_c {
+    color: #B9DCE6;
+}
+.S_bg4, .WB_left_nav a.lev_curr, .WB_left_nav a.lev_curr:hover, a.W_gotop:hover {
+    background-color: #FAFAFA;
+}
+.S_bg4_c {
+    color: #FAFAFA;
+}
+.S_bg5 {
+    background-color: #FFFFFF;
+}
+.S_line1 {
+    border-color: #D9D9D9;
+}
+.S_line1_c {
+    color: #D9D9D9;
+}
+.S_line2 {
+    border-color: #E6E6E6;
+}
+.S_line2_c {
+    color: #E6E6E6;
+}
+.S_line3, .send_weibo .input, .WB_left_nav .lev_edit .lev a {
+    border-color: #CCCCCC;
+}
+.S_line3_c {
+    color: #CCCCCC;
+}
+.S_line4 {
+    border-color: #FFB941;
+}
+.S_line4_c {
+    color: #FFB941;
+}
+.S_line5 {
+    border-color: #FFFFFF;
+}
+.W_miniblog {
+    /* chenjw edit background-image: url("images/body_bg.jpg?id=1348554801578");*/
+    background-position: center 0;
+    background-repeat: no-repeat;
+    padding-top: 0px;
+    /* chenjw edit padding-top: 20px; */
+}
+.S_profile .W_miniblog {
+    padding-top: 40px;
+}
+.W_miniblog_fb {
+    background-image: none;
+}
+.W_main {
+    /* chenjw edit background-image: url("images/repeat_bg_y.png?id=1348554801578");*/
+    background-repeat: repeat-y;
+}
+.global_footer {
+    background-image: url("images/footer_bg.png?id=1348554801578");
+}
+.WB_global_nav, .WB_global_nav .gn_title.current .gn_tab, .WB_global_nav .gn_setting.current .gn_name, .WB_global_nav .gn_title .gn_tab:hover, .WB_global_nav .gn_setting .gn_name:hover, .WB_global_nav .gn_setting .gn_tab:hover {
+    background-image: url("../../image/bg_nav.png");
+}
+.send_weibo .title, .send_weibo .send_btn.disable, .send_weibo .send_btn.disable:hover, .send_weibo .input .arrow, .W_tabarrow {
+    background-image: url("images/all_iconbtn.png?id=1348554801578");
+}
+.send_weibo .title {
+    background-position: 0 -275px;
+}
+.send_weibo .send_btn.disable, .send_weibo .send_btn.disable:hover {
+    background-position: -225px -275px;
+}
+.send_weibo .input .arrow {
+    background-position: -475px -275px;
+}
+.W_tabarrow {
+    background-position: -410px -275px;
+}
+.W_btn_a_disable, .W_btn_a_disable span, .W_btn_b, .W_btn_b span, .W_btn_b_disable, .W_btn_b_disable:hover, .W_btn_b_disable span, .W_btn_b_disable:hover span, .W_btn_c, .W_btn_c span, .W_btn_c:hover, .W_btn_c:hover span, .W_btn_c_disable, .W_btn_c_disable span, .W_btn_d_disable, .W_btn_d_disable span, .W_btn_e, .W_btn_e span, .W_btn_e_disable, .W_btn_e_disable:hover, .W_btn_e_disable span, .W_btn_e_disable:hover span, .W_btn_f, .W_btn_f span, .W_btn_f_disable, .W_btn_f_disable span, .W_btn_f_disable:hover, .W_btn_f_disable:hover span, .W_btn_round, .W_btn_round span, .W_btn_round_ico, .W_btn_round_ico span, .W_btn_round2, .W_btn_round2 span, .W_btn_arrow, .W_btn_arrow span {
+    background-image: url("images/all_iconbtn.png?id=1348554801578");
+}
+.icon_gotop, .icon_addtwo, .icon_refresh, .icon_bytime, .icon_bypopular, .ico_page_prev, .ico_page_next, .btn_page_prevdis .ico_page_prev, .btn_page_nextdis .ico_page_next {
+    background-image: url("images/all_iconbtn.png?id=1348554801578");
+}
+#js_homeskin_skin001_skin {
+    height: 42px;
+}
+#js_skin_skin001_skin {
+    height: 42px;
+}

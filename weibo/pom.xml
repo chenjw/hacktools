@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.chenjw.spider</groupId>
+	<artifactId>weibo</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>weibo</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.alibaba.org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.5.1-alibaba-0</version>
+				<configuration>
+					<addVersionToProjectName>true</addVersionToProjectName>
+					<downloadSources>true</downloadSources>
+					<projectTextFileEncoding>UTF-8</projectTextFileEncoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.alibaba.external</groupId>
+				<artifactId>jakarta.commons.httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.httpclient</artifactId>
+		</dependency>
+	</dependencies>
+	<properties>
+		<jetty-version>6.1.22</jetty-version>
+		<webx3-version>3.0.6</webx3-version>
+	</properties>
+</project>

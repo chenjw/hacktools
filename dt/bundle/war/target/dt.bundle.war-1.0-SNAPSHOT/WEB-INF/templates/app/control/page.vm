@@ -1,0 +1,10 @@
+<div class="W_pages">
+	#if($moreNum==-1)
+	#elseif($moreNum==0)
+		<span>已到达最后</span>
+	#else
+	<a href="javascript:DT.nextPage('${minSort}');" class="W_moredown">
+        <span>点击查看剩余${moreNum}条</span>
+    </a>
+	#end
+</div>

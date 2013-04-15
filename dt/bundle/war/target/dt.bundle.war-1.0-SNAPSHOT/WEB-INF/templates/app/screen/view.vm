@@ -1,0 +1,49 @@
+<script>
+	var Context={};
+	#if($detailList.size()==0)
+	Context.maxSort="0";
+	#else
+	Context.maxSort="${detailList.get(0).deleteSort}";
+	#end
+	Context.searchInfo={
+		senderUserId : "$!{searchInfo.senderUserId}",
+		followerUserId : "$!{searchInfo.followerUserId}",
+		senderUserName : "$!{searchInfo.senderUserName}",
+		followerUserName : "$!{searchInfo.followerUserName}",		
+		useFollower : $!{searchInfo.useFollower},
+		demo : $!{searchInfo.demo},
+		type : "$!{searchInfo.type.name()}"
+
+	};
+</script>
+
+<script src="js/frame.js" language="JavaScript"></script>
+
+$control.setTemplate("top.vm")
+<div class="W_miniblog" >
+    <div class="W_miniblog_fb">
+        <div class="W_main">
+            <div class="W_main_bg clearfix">
+                <div id="plc_main clearfix">
+                    <div class="W_main_a ">
+                        <div class="W_main_c" id="Box_center" ucardconf="type=1" smartconf="type=1">
+                            <div id="pl_content_homeFeed">
+                                <div class="WB_feed" id="detail_list">
+                                    #parse ("control/detailList.vm")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="global_dialog" >
+	
+</div>
+	
+<div id="send_box" style="display:none;" >
+	<img width="500" src=""/>
+	<textarea rows="4" cols="40" style="font-size:20px;font-weight:bold;"></textarea>
+</div>

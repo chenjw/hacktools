@@ -1,0 +1,70 @@
+<style>
+
+.form {
+	margin-top: 0px;
+}
+
+.h1 {
+	margin-left: 50px;
+	text-align: left;
+	font-size:24px; font-family:"宋体"; 
+	line-height:70px; 
+}
+
+.line {
+	margin-left: 100px;
+	text-align: left;
+	font-size:20px; font-family:"宋体"; 
+	line-height:50px; 
+}
+
+.img {
+	margin-left: 100px;
+	text-align: left;
+}
+</style>
+<div class="form">
+	<div class="h1">
+		为什么需要App Key和App Secret？
+	</div>
+	<div class="line">
+		应用需要用到新浪微博的open api，但是因为某些原因，记录被删除微博的应用无法通过新浪的应用审核。
+	</div>
+	<div class="line">
+		所以这里采用了一个变通的方法，由使用者自己创建测试应用（未通过审核的测试应用无法被别人使用，但是可以供自己使用），来支持open api的使用。
+	</div>
+	
+	<div class="h1">
+		怎么获得App Key和App Secret？
+	</div>
+	<div class="line">
+		一. 访问<a href="http://open.weibo.com/apps" target="_blank">http://open.weibo.com/apps</a> 点击“创建应用”。
+	</div>
+	<div class="img">
+		<img src="/image/get_key_1.png"/>
+	</div>
+	<div class="line">
+		二. 选择创建移动应用。
+	</div>
+	<div class="img">
+		<img src="/image/get_key_2.png"/>
+	</div>
+	<div class="line">
+		三. 其中“应用地址”必须要填“http://deleted-tweets.cloudfoundry.com”，其他信息都可以随便填。
+	</div>
+	<div class="img">
+		<img src="/image/get_key_3.png"/>
+	</div>
+	<div class="line">
+		四. 左侧菜单选择“高级信息”，把“授权回调页”修改为“http://deleted-tweets.cloudfoundry.com”。
+	</div>
+	<div class="img">
+		<img src="/image/get_key_4.png"/>
+	</div>
+	<div class="line">
+		五. 在应用信息里的基本信息栏中就可以看到需要的App Key和App Secret。
+	</div>
+	<div class="img">
+		<img src="/image/get_key_5.png"/>
+	</div>
+</div>

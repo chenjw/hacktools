@@ -1,0 +1,30 @@
+<ul class="WB_media_list clearfix" node-type="media_thumbnail">
+    <li>
+        <div class="chePicMin S_bg2 bigcursor" onclick="DT.mediaOpen($!{detail.id});">
+            <img class="bigcursor" image-type="pic" node-type="feed_list_media_bgimg" alt="" src="$!{detail.thumbnailPic}" title="$!{detail.thumbnailPic}"/>
+        </div>
+    </li>
+</ul>
+<div class="WB_media_expand SW_fun2 S_line1 S_bg1" style="display:none" node-type="media_bmiddle"><!--temp start-->
+    <p class="medis_func S_txt3">
+        <a href="javascript:DT.mediaClose($!{detail.id});" class="retract">
+            <em class="W_ico12 ico_retract"></em>
+            收起</a>
+            <i class="W_vline">|</i>
+            <a href="$!{detail.originalPic}" target="_blank" class="show_big" >
+                <em class="W_ico12 ico_showbig"></em>
+                查看大图</a>
+                <i class="W_vline">|</i>
+                <a href="javascript:void(0);" class="turn_left" >
+                    <em class="W_ico12 ico_turnleft"></em>
+                    向左转</a>
+                    <i class="W_vline">|</i>
+                    <a href="javascript:void(0);" class="turn_right">
+                        <em class="W_ico12 ico_turnright"></em>
+                        向右转</a>
+    </p>
+    <div class="smallcursor" onclick="DT.mediaClose($!{detail.id});">
+        <img src="$!{detail.bmiddlePic}" image-type="pic" width="440" title="$!{detail.bmiddlePic}"/>
+    </div>
+    <!--temp end-->
+</div>

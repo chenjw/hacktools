@@ -1,0 +1,30 @@
+<ul class="WB_media_list clearfix" node-type="reason_media_thumbnail">
+    <li>
+        <!-- img之间不能加空格 -->
+        <div class="chePicMin S_bg2 bigcursor" onclick="DT.reasonMediaOpen($!{detail.id});">
+            <img class="bigcursor" image-type="pic" src="$!{reason.thumbnailPic}" alt="" />
+        </div>
+    </li>
+</ul>
+<div class="expand" style="display:none" node-type="reason_media_bmiddle">
+    <p class="medis_func S_txt3">
+        <a href="javascript:DT.reasonMediaClose($!{detail.id});" class="retract">
+            <em class="W_ico12 ico_retract"></em>
+            收起</a>
+            <i class="W_vline">|</i>
+            <a href="$!{reason.originalPic}" target="_blank" class="show_big">
+                <em class="W_ico12 ico_showbig"></em>
+                查看大图</a>
+                <i class="W_vline">|</i>
+                <a href="javascript:void(0);" class="turn_left" >
+                    <em class="W_ico12 ico_turnleft"></em>
+                    向左转</a>
+                    <i class="W_vline">|</i>
+                    <a href="javascript:void(0);" class="turn_right">
+                        <em class="W_ico12 ico_turnright"></em>
+                        向右转</a>
+    </p>
+    <div class="smallcursor" onclick="javascript:DT.reasonMediaClose($!{detail.id});">
+        <img src="$!{reason.bmiddlePic}" image-type="pic" width="440"/>
+    </div>
+</div>

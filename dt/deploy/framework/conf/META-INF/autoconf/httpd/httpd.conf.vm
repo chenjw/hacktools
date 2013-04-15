@@ -1,0 +1,40 @@
+Listen ${dt_port}
+ServerRoot "${dt_output}"
+PidFile "${dt_output}/logs/httpd.pid"
+
+ServerName ${dt_domainName}
+User ${dt_unix_user}
+Group ${dt_unix_user}
+
+Timeout 15
+KeepAlive On
+MaxKeepAliveRequests 200
+KeepAliveTimeout 10
+MaxRequestsPerChild 20000
+
+<IfModule worker.c>
+	 ServerLimit      16
+     StartServers     3
+     MaxClients       1024
+     MinSpareThreads  25
+     MaxSpareThreads  250
+     ThreadsPerChild  64   
+</IfModule>
+
+DocumentRoot "${dt_deployhome}/htdocs"
+<Directory />
+    Options FollowSymLinks
+    AllowOverride None
+</Directory>
+
+<Directory "${dt_deployhome}/htdocs">
+    Options FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
+## base config
+Include ${dt_deployhome}/conf/httpd/httpd_base.conf
+
+Include ${dt_deployhome}/conf/httpd/mod_alibaba.conf
+Include ${dt_deployhome}/conf/httpd/mod_proxy.conf

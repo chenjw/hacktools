@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="dt_watched_user">
+	<typeAlias alias="TA-DT-WATCHED-USER" type="com.chenjw.spider.dt.dataobject.WatchedUserDO"/>
+
+	<resultMap class="TA-DT-WATCHED-USER" id="RM-WATCHED-USER">
+		<result property="userId" column="USER_ID" jdbcType="VARCHAR" />
+		<result property="token" column="TOKEN" jdbcType="VARCHAR" />
+		<result property="status" column="STATUS" jdbcType="VARCHAR" />
+		<result property="screenName" column="SCREEN_NAME" jdbcType="VARCHAR" />
+		<result property="expireDate" column="EXPIRE_DATE" jdbcType="DATETIME" javaType="date" />
+		<result property="clientId" column="CLIENT_ID" jdbcType="VARCHAR" />
+		<result property="clientSecret" column="CLIENT_SECRET" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="MS-SELECT-ALL-WATCHED-USER" resultMap="RM-WATCHED-USER">
+		SELECT USER_ID,TOKEN,SCREEN_NAME,STATUS,EXPIRE_DATE,CLIENT_ID,CLIENT_SECRET
+		FROM dt_watched_user WHERE 1=1
+	</select>
+
+	<select id="MS-SELECT-WATCHED-USER" resultMap="RM-WATCHED-USER">
+		SELECT USER_ID,TOKEN,SCREEN_NAME,STATUS,EXPIRE_DATE,CLIENT_ID,CLIENT_SECRET
+		FROM dt_watched_user WHERE USER_ID=#userId#
+	</select>
+	
+	<select id="MS-SELECT-WATCHED-USER-BY-SCREEN-NAME" resultMap="RM-WATCHED-USER">
+		SELECT USER_ID,TOKEN,SCREEN_NAME,STATUS,EXPIRE_DATE,CLIENT_ID,CLIENT_SECRET
+		FROM dt_watched_user WHERE SCREEN_NAME=#screenName#
+	</select>
+	
+	<select id="MS-SELECT-WATCHED-USER-BY-TOKEN" resultMap="RM-WATCHED-USER">
+		SELECT USER_ID,TOKEN,SCREEN_NAME,STATUS,EXPIRE_DATE,CLIENT_ID,CLIENT_SECRET
+		FROM dt_watched_user WHERE TOKEN=#token#
+	</select>
+
+    <insert id="MS-INSERT-WATCHED-USER" parameterClass="TA-DT-WATCHED-USER">
+        INSERT INTO dt_watched_user (
+           	USER_ID,GMT_CREATE,TOKEN,SCREEN_NAME,STATUS,EXPIRE_DATE,CLIENT_ID,CLIENT_SECRET
+        ) VALUES (
+    		#userId#,now(),#token#,#screenName#,#status#,#expireDate#,#clientId#,#clientSecret#
+        )
+    </insert>
+    
+	<update id="MS-UPDATE-WATCHED-USER" parameterClass="TA-DT-WATCHED-USER">
+        UPDATE dt_watched_user SET 
+        	TOKEN = #token#,
+        	SCREEN_NAME = #screenName#,
+        	STATUS = #status#,
+        	EXPIRE_DATE = #expireDate#,
+        	CLIENT_ID = #clientId#,
+        	CLIENT_SECRET = #clientSecret#
+        WHERE USER_ID = #userId#
+    </update>
+    
+    
+</sqlMap>

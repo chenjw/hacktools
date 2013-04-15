@@ -1,0 +1,20 @@
+<div class="W_miniblog" >
+
+    <div class="W_miniblog_fb">
+        <div class="W_main">
+            <div class="W_main_bg clearfix">
+                <div id="plc_main clearfix">
+                    <div class="W_main_a ">
+                        <div class="W_main_c" id="Box_center" ucardconf="type=1" smartconf="type=1">
+                            <div id="pl_content_homeFeed">
+                                <div class="WB_feed" id="detail_list">
+                                    #parse ("control/detailList.vm")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

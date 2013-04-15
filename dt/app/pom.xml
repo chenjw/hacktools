@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>dt.all</artifactId>
+		<groupId>com.chenjw.spider</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.chenjw.spider</groupId>
+	<artifactId>dt.web.app</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>app</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>webx3.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>webx3.compat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>webx3.extension.rpc</artifactId>
+		</dependency>
+    
+    
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>webx3.test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.chenjw.spider</groupId>
+			<artifactId>dt.common.config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.chenjw.spider</groupId>
+			<artifactId>dt.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.chenjw.spider</groupId>
+			<artifactId>dt.biz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.lang</artifactId>
+		</dependency>
+		<!-- dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>java.j2ee</artifactId>
+		</dependency-->
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>java.servlet</artifactId>
+		</dependency>
+	</dependencies>
+</project>

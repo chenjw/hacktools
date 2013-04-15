@@ -1,0 +1,20 @@
+{ "mysql-5.1" : [
+      { "credentials" : {
+            "host" : "127.0.0.1",
+            "hostname" : "127.0.0.1",
+            "name" : "d5e4485de1b9d43ae8759f553b69b86f2",
+            "password" : "pIzZAgyq48xau",
+            "port" : 10000,
+            "user" : "uIgCrSNfE6U8A",
+            "username" : "uIgCrSNfE6U8A"
+          },
+        "label" : "mysql-5.1",
+        "name" : "chenjw-mysql",
+        "plan" : "free",
+        "tags" : [ "mysql",
+            "mysql-5.1",
+            "relational"
+          ]
+      }
+    ]
+}

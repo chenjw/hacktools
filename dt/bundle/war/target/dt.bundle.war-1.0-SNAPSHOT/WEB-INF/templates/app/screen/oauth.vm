@@ -1,0 +1,11 @@
+<script>
+    function authLoad(){
+     	App.AuthDialog.show({
+    		client_id : '${client_ID}',
+    		redirect_uri : '${app_URI}',
+    		height: 120,
+            scope: ''
+    	});
+    }
+    authLoad();
+</script>

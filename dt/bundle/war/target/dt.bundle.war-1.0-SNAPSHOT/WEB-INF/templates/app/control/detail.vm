@@ -1,0 +1,43 @@
+<div class="WB_feed_type SW_fun S_line2" id="$!{detail.id}">
+    <div class="WB_screen">
+    </div>
+    <div class="WB_feed_datail S_line2 clearfix">
+        <div class="WB_face">
+            <a class="W_face_radius" href="http://weibo.com/u/$!{detail.user.id}" title="$!{detail.user.screenName}" target="_blank">
+                <img title="$!{detail.user.screenName}" image-type="pic" alt="" width="50" height="50" src="$!{detail.user.profileImageUrl}"/>
+            </a>
+        </div>
+        <div class="WB_detail">
+            <div class="WB_info">
+                <a class="WB_name S_func1" title="$!{detail.user.screenName}" href="javascript:DT.update({'senderUserId':'$!{detail.user.id}','senderUserName':'$!{detail.user.screenName}'});" target="_blank">$!{detail.user.screenName}</a>
+            </div>
+            <div class="WB_text">
+                $!wbTextUtils.toWbText($!{detail.text})
+            </div>
+            #if($!{detail.thumbnailPic}!="")
+                #parse ("control/media.vm")
+            #end
+            #if($!{detail.reason})
+                #set($reason = ${detail.reason})
+                #parse ("control/reason.vm")
+            #end
+            <div class="WB_func clearfix">
+                <div class="WB_handle S_link2 WB_time">
+                    $!dateUtils.toLocaleString($!{detail.createdAt})发送 <em	class="S_txt3">|</em>
+                    转(${detail.repostsCount}) 评(${detail.commentsCount})<em	class="S_txt3">|</em>
+                    #if($searchInfo.supportDelete())
+                        <a class="S_func4" href="javascript:DT.removeTweet('$!{detail.id}');">删除</a>
+                        <em	class="S_txt3">|</em>
+                    #end
+                    <a class="S_func4" href="javascript:DT.firstPage();">回首页</a>
+                    <em	class="S_txt3">|</em>
+                    <a class="S_func4" href="javascript:DT.capture('$!{detail.id}');">转发</a>
+                </div>
+                <div class="WB_from S_link2 WB_time">
+                    $!dateUtils.toLocaleString($!{detail.deleteDate})删除
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

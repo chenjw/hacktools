@@ -1,0 +1,11 @@
+<div id="pl_content_top">
+    <div class="WB_global_nav">
+        <div class="gn_bg">
+            <div class="gn_header">
+                <div class="gn_nav" id="nav">
+                    #parse ("control/nav.vm")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

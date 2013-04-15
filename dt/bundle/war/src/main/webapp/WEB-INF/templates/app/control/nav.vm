@@ -1,0 +1,53 @@
+#if($searchInfo.type.name()=="TIMELINE" && !$searchInfo.demo)
+    <div class="gn_title" id="btn_account">
+        <a href="javascript:DT.demoTimeline()" class="gn_tab" tabindex="4" style="">
+            <i>公共帐号</i>
+        </a>
+    </div>
+#end
+
+#if($searchInfo.type.name()!="TOP_REPOSTS")
+    <div class="gn_title" id="btn_top_reposts" title="被删除微博中转发数最高的">
+        <a href="javascript:DT.topReposts()" class="gn_tab" tabindex="4" style="" >
+            <i>最热门</i>
+        </a>
+    </div>
+#end
+<div class="selected-attr gn_title">
+    <dl id="your-choices" class="props-now">
+        #if($searchInfo.type.name()=="TIMELINE")
+            #if($searchInfo.demo)
+                <dd>
+                    <a href="javascript:DT.update({'demo':false});">
+                        <h5>$!{searchInfo.followerUserName} 关注的</h5>
+                        <span class="close-icon"></span>
+                    </a>
+                </dd>
+            #else
+                <dd>
+                    <a href="javascript:void(0);">
+                        <h5>$!{searchInfo.followerUserName} 关注的</h5>
+                    </a>
+                </dd>
+            #end
+        #elseif($searchInfo.type.name()=="TOP_REPOSTS")
+            <dd>
+                <a href="javascript:DT.update({'type':'TIMELINE','useFollower':true});">
+                    <h5>最热门</h5>
+                    <span class="close-icon"></span>
+                </a>
+            </dd>
+		#end
+		
+		#if($searchInfo.senderUserId)
+            <dd>
+                <a href="javascript:DT.update({'senderUserId':''});">
+                    <h5>$!{searchInfo.senderUserName} 发的</h5>
+                    <span class="close-icon"></span>
+                </a>
+            </dd>
+        #end
+    </dl>
+</div>
+<div class="gn_person" id="new_tweets_message">
+</div>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="dt_tweet">
+
+	<typeAlias alias="TA-DT-TWEET" type="com.chenjw.spider.dt.dataobject.TweetDO"/>
+
+	<resultMap class="TA-DT-TWEET" id="RM-DT-TWEET">
+		<result property="tid" column="TID" jdbcType="BIGINT" />
+		<result property="userId" column="USER_ID" jdbcType="VARCHAR" />
+		<result property="memberUserId" column="MEMBER_USER_ID" jdbcType="VARCHAR" />
+		<result property="postDate" column="POST_DATE" jdbcType="DATETIME" javaType="date" />
+		<result property="content" column="CONTENT" typeHandler="org.springframework.orm.ibatis.support.BlobByteArrayTypeHandler" />
+		<result property="repostsCount" column="REPOSTS_COUNT" jdbcType="INT" />
+		<result property="commentsCount" column="COMMENTS_COUNT" jdbcType="INT" />
+	</resultMap>
+
+	<select id="MS-SELECT-TWEET-IDS-BY-MEMBER-USER-ID" parameterClass="java.lang.String"
+		resultMap="RM-DT-TWEET">
+		SELECT TID,USER_ID,MEMBER_USER_ID,POST_DATE,CONTENT,REPOSTS_COUNT,COMMENTS_COUNT
+		FROM dt_tweet WHERE MEMBER_USER_ID=#memberUserId#
+	</select>
+	
+	<select id="MS-SELECT-TWEET-BY-TID-AND-MEMBER-USER-ID" parameterClass="java.util.Map"
+		resultMap="RM-DT-TWEET">
+		SELECT TID,USER_ID,MEMBER_USER_ID,POST_DATE,CONTENT,REPOSTS_COUNT,COMMENTS_COUNT
+		FROM dt_tweet WHERE TID=#tid# and MEMBER_USER_ID=#memberUserId#
+	</select>
+
+    <insert id="MS-INSERT-TWEET" parameterClass="TA-DT-TWEET">
+        INSERT INTO dt_tweet (
+            TID,USER_ID,MEMBER_USER_ID,POST_DATE,CONTENT,GMT_CREATE,REPOSTS_COUNT,COMMENTS_COUNT
+        ) VALUES (
+            #tid#,#userId#,#memberUserId#,#postDate#,#content#,now(),#repostsCount#,#commentsCount#
+        )
+    </insert>
+    
+	<delete id="MS-DELETE-TWEET-BY-TID-AND-MEMBER-USER-ID" parameterClass="java.util.Map">
+        DELETE FROM dt_tweet WHERE TID=#tid# and MEMBER_USER_ID=#memberUserId#
+    </delete>
+   
+</sqlMap>

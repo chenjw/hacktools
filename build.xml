@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="knife" basedir="." default="main">
+    
+    <!-- Properties -->
+
+    	<property name="base.dir" value="."/>
+	<property name="build.dir" location="${base.dir}/build"/>
+	<property name="build.classes.dir" location="${build.dir}/classes"/>
+	<property name="dist.dir" location="${base.dir}/dist"/>
+	<property environment="env"/>
+	<property name="version" value="0.7.8"/>
+	<property name="appName" value="spider"/>
+	<property name="date" value="2012"/>
+	
+  	<path id="lib.path">
+		<fileset dir="${base.dir}/lib/lib">
+   			<include name="**/*.jar"/>
+		</fileset>
+	 	<pathelement location="${env.JAVA_HOME}/lib/tools.jar"/>
+  	</path>
+    	<target name="init">
+  		<delete dir="${build.dir}" quiet="true"/>
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.classes.dir}"/>
+		<delete dir="${dist.dir}" quiet="true"/>
+		<mkdir dir="${dist.dir}"/>
+		<mkdir dir="${dist.dir}/spider/lib"/>
+		<mkdir dir="${dist.dir}/deleted-tweets"/>
+		<mkdir dir="${dist.dir}/deleted-tweets/upload"/>
+	</target>
+
+	<target name="maven-dt">
+		<exec executable="mvn" dir="dt">
+    			<arg value="install:install-file"/>
+			<arg value="-DgroupId=com.chenjw.external"/>
+			<arg value="-DartifactId=htmlparser"/>
+			<arg value="-Dversion=1.0.0"/>
+			<arg value="-Dfile=lib/htmlparser.jar"/>
+			<arg value="-Dpackaging=jar"/>
+			<arg value="-DgeneratePom=true"/>
+ 		</exec>	
+
+		<exec executable="mvn" dir="dt">
+    			<arg value="install:install-file"/>
+			<arg value="-DgroupId=com.chenjw.external"/>
+			<arg value="-DartifactId=filterbuilder"/>
+			<arg value="-Dversion=1.0.0"/>
+			<arg value="-Dfile=lib/filterbuilder.jar"/>
+			<arg value="-Dpackaging=jar"/>
+			<arg value="-DgeneratePom=true"/>
+ 		</exec>	
+
+		<exec executable="mvn" dir="dt">
+    			<arg value="install:install-file"/>
+			<arg value="-DgroupId=com.chenjw.external"/>
+			<arg value="-DartifactId=htmllexer"/>
+			<arg value="-Dversion=1.0.0"/>
+			<arg value="-Dfile=lib/htmllexer.jar"/>
+			<arg value="-Dpackaging=jar"/>
+			<arg value="-DgeneratePom=true"/>
+ 		</exec>	
+
+
+		<exec executable="mvn" dir="dt">
+    			<arg value="install:install-file"/>
+			<arg value="-DgroupId=com.chenjw"/>
+			<arg value="-DartifactId=beancopyutils"/>
+			<arg value="-Dversion=1.0.0"/>
+			<arg value="-Dfile=lib/beancopyutils-1.0.0.jar"/>
+			<arg value="-Dpackaging=jar"/>
+			<arg value="-DgeneratePom=true"/>
+ 		</exec>	
+
+		<!-- upload to cloudfoundry-->
+		<exec executable="mvn" dir="dt">
+    			<arg value="clean"/>
+			<arg value="install"/>
+ 		</exec>		
+	</target>
+
+	<target name="copy-war-dt">
+		<copy tofile="${dist.dir}/deleted-tweets/upload/deletedtweets.war" file="${base.dir}/dt/bundle/war/target/dt.bundle.war-1.0-SNAPSHOT.war">
+  		</copy>
+	</target>
+
+	<target name="copy-to-tomcat">
+		<delete dir="/home/chenjw/software/tomcat/webapps" quiet="true"/>
+		<mkdir dir="/home/chenjw/software/tomcat/webapps"/>
+		<copy todir="/home/chenjw/software/tomcat/webapps">
+    			<fileset dir="${dist.dir}/deleted-tweets/upload">
+				<include name="deletedtweets.war"/>
+			</fileset>
+  		</copy>
+	</target>
+	
+	<target name="upload-cloudfoundry">
+		<copy todir="${dist.dir}/deleted-tweets/upload">
+    			<fileset dir="${base.dir}/dt/cloudfoundry">
+				<include name="manifest.yml"/>
+			</fileset>
+  		</copy>
+		<exec executable="vmc">
+    			<arg value="target"/>
+			<arg value="https://api.cloudfoundry.com"/>
+ 		</exec>	
+		<!-- upload to cloudfoundry-->
+		<exec executable="vmc">
+    			<arg value="login"/>
+			<arg value="--email"/>
+			<arg value="cjw1983@gmail.com"/>
+			<arg value="--password"/>
+			<arg value="19830926"/>
+ 		</exec>	
+
+		<exec executable="vmc" dir="${dist.dir}/deleted-tweets/upload/">
+			<arg value="stop"/>
+			<arg value="deleted-tweets"/>
+ 		</exec>
+		<exec executable="vmc" dir="${dist.dir}/deleted-tweets/upload/">
+			<arg value="push"/>
+ 		</exec>
+		<exec executable="vmc" dir="${dist.dir}/deleted-tweets/upload/">
+			<arg value="start"/>
+			<arg value="deleted-tweets"/>
+ 		</exec>
+
+
+	</target>
+
+	<target name="stop-cloudfoundry">
+		<exec executable="vmc">
+    			<arg value="target"/>
+			<arg value="https://api.cloudfoundry.com"/>
+ 		</exec>	
+		<!-- upload to cloudfoundry-->
+		<exec executable="vmc">
+    			<arg value="login"/>
+			<arg value="--email"/>
+			<arg value="cjw1983@gmail.com"/>
+			<arg value="--password"/>
+			<arg value="19830926"/>
+ 		</exec>		
+
+		<exec executable="vmc" dir="${dist.dir}/deleted-tweets/upload/">
+			<arg value="stop"/>
+			<arg value="deleted-tweets"/>
+ 		</exec>
+
+
+	</target>
+
+    
+    	<target name="main" depends="init,maven-dt,copy-war-dt,copy-to-tomcat,upload-cloudfoundry"/>
+
+	<target name="upload" depends="upload-cloudfoundry"/>
+
+	<target name="stop" depends="stop-cloudfoundry"/>
+
+</project>

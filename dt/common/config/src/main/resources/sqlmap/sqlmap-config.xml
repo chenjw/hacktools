@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<settings useStatementNamespaces="false" cacheModelsEnabled="false" enhancementEnabled="false" lazyLoadingEnabled="false" maxRequests="32" maxSessions="10" maxTransactions="5" />
+
+	<sqlMap resource="sqlmap/ibatis/sqlmap-deleted-tweet.xml" />
+	<sqlMap resource="sqlmap/ibatis/sqlmap-tweet.xml" />
+	<sqlMap resource="sqlmap/ibatis/sqlmap-watched-user.xml" />
+</sqlMapConfig>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="dt_deleted_tweet">
+
+	<typeAlias alias="TA-DT-DELETED-TWEET" type="com.chenjw.spider.dt.dataobject.TweetDO"/>
+
+	<resultMap class="TA-DT-DELETED-TWEET" id="RM-DT-DELETED-TWEET">
+		<result property="tid" column="TID" jdbcType="BIGINT" />
+		<result property="userId" column="USER_ID" jdbcType="VARCHAR" />
+		<result property="memberUserId" column="MEMBER_USER_ID" jdbcType="VARCHAR" />
+		<result property="postDate" column="POST_DATE" jdbcType="DATETIME" javaType="date" />
+		<result property="deleteDate" column="DELETE_DATE" jdbcType="DATETIME" javaType="date" />
+		<result property="deleteSort" column="DELETE_SORT" jdbcType="VARCHAR" />
+		<result property="content" column="CONTENT" jdbcType="BLOB" />
+		<result property="repostsCount" column="REPOSTS_COUNT" jdbcType="INT" />
+		<result property="commentsCount" column="COMMENTS_COUNT" jdbcType="INT" />
+	</resultMap>
+	
+	<sql id="DT-DELETED-TWEET-FIELDS">
+		TID,USER_ID,MEMBER_USER_ID,POST_DATE,CONTENT,DELETE_DATE,DELETE_SORT,REPOSTS_COUNT,COMMENTS_COUNT
+	</sql>
+	
+	<select id="MS-SELECT-DELETED-TWEET-BY-TID-AND-MEMBER-USER-ID" parameterClass="java.util.Map"
+		resultMap="RM-DT-DELETED-TWEET">
+		SELECT <include refid="DT-DELETED-TWEET-FIELDS" />
+		FROM dt_deleted_tweet WHERE TID=#tid# and MEMBER_USER_ID=#memberUserId#
+	</select>
+	
+	<select id="MS-SELECT-DELETED-TWEET-BY-MEMBER-USER-ID" parameterClass="java.util.Map"
+		resultMap="RM-DT-DELETED-TWEET">
+		SELECT <include refid="DT-DELETED-TWEET-FIELDS" />
+		FROM dt_deleted_tweet WHERE 1=1
+		<isNotNull property="senderUserId" prepend="AND">
+			<![CDATA[
+				 USER_ID = #senderUserId#
+			]]>
+		</isNotNull>
+		<isNotNull property="followerUserId" prepend="AND">
+			<![CDATA[
+				 MEMBER_USER_ID = #followerUserId#
+			]]>
+		</isNotNull>
+		<isNotNull property="page.maxSort" prepend="AND">
+			<![CDATA[
+				 DELETE_SORT < #page.maxSort#
+			]]>
+		</isNotNull>
+		ORDER BY DELETE_SORT DESC 
+		LIMIT $page.pageSize$
+	</select>
+	
+	<select id="MS-SELECT-DELETED-TWEET-TOP-REPOSTS" parameterClass="java.util.Map"
+		resultMap="RM-DT-DELETED-TWEET">
+		SELECT DISTINCT(TID),<include refid="DT-DELETED-TWEET-FIELDS" />
+		FROM dt_deleted_tweet WHERE 1=1
+		<isNotNull property="senderUserId" prepend="AND">
+			<![CDATA[
+				 USER_ID = #senderUserId#
+			]]>
+		</isNotNull>
+		<isNotNull property="followerUserId" prepend="AND">
+			<![CDATA[
+				 MEMBER_USER_ID = #followerUserId#
+			]]>
+		</isNotNull>
+		ORDER BY REPOSTS_COUNT DESC,COMMENTS_COUNT DESC
+		LIMIT 10
+	</select>
+	
+	<select id="MS-COUNT-DELETED-TWEET-BY-MEMBER-USER-ID" parameterClass="java.util.Map"
+		resultClass="int">
+		SELECT COUNT(1)
+		FROM dt_deleted_tweet WHERE 1=1
+		<isNotNull property="senderUserId" prepend="AND">
+			<![CDATA[
+				 USER_ID = #senderUserId#
+			]]>
+		</isNotNull>
+		<isNotNull property="followerUserId" prepend="AND">
+			<![CDATA[
+				 MEMBER_USER_ID = #followerUserId#
+			]]>
+		</isNotNull>
+		<isNotNull property="minSort" prepend="AND">
+			<![CDATA[
+				 DELETE_SORT > #minSort#
+			]]>
+		</isNotNull>
+		<isNotNull property="maxSort" prepend="AND">
+			<![CDATA[
+				 DELETE_SORT < #maxSort#
+			]]>
+		</isNotNull>
+	</select>
+
+    <insert id="MS-INSERT-DELETED-TWEET" parameterClass="TA-DT-DELETED-TWEET">
+        INSERT INTO dt_deleted_tweet (
+            TID,USER_ID,MEMBER_USER_ID,CONTENT,POST_DATE,DELETE_DATE,DELETE_SORT,GMT_CREATE,REPOSTS_COUNT,COMMENTS_COUNT
+        ) VALUES (
+            #tid#,#userId#,#memberUserId#,#content#,#postDate#,#deleteDate#,#deleteSort#,now(),#repostsCount#,#commentsCount#
+        )
+    </insert>
+    
+	<delete id="MS-DELETE-DELETED-TWEET-BY-TID-AND-MEMBER-USER-ID" parameterClass="java.util.Map">
+        DELETE FROM dt_deleted_tweet WHERE TID=#tid# and MEMBER_USER_ID=#memberUserId#
+    </delete>
+</sqlMap>

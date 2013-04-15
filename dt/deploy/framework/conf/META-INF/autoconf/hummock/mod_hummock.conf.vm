@@ -1,0 +1,6 @@
+LoadModule hummock_module ${dt_hummock_home}/client/bin/mod_hummock.so
+<IfModule mod_hummock.c>    
+    ClientConfPath ${dt_deployhome}/conf/hummock/hummockclient.conf	
+    LogFormat "\"%{ListInfo}i\" %a \"%{CookieInfo}i\" \"%{HttpHeaderInfo}i\"" hummockclient
+    CustomLog "| ${dt_hummock_home}/client/bin/hummockclient -k start -f ${dt_deployhome}/conf/hummock/hummockclient.conf" hummockclient env=!NotProtectURL
+</IfModule>

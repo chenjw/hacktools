@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link href="css/v2/frame.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+        <link href="css/v2/A_index.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+        <link href="css/v2/index.css" type="text/css" rel="stylesheet" charset="utf-8" />
+        <link href="css/v2/skin.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+        <link href="css/v2/right_thirdpart.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+        <link href="css/v2/wbim.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+		<link href="css/v2/colortip-1.0-jquery.css" type="text/css" rel="stylesheet" charset="utf-8"/>
+        
+		<link rel="stylesheet" href="css/v2/tip/tip-yellow.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-violet.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-darkgray.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-skyblue.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-yellowsimple.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-twitter.css" type="text/css" />
+    	<link rel="stylesheet" href="css/v2/tip/tip-green.css" type="text/css" />
+		<link rel="stylesheet" href="css/v2/jquery-ui-1.10.0.custom.min.css" type="text/css" />
+		
+		<title>test</title>
+		
+		<script src="js/jquery-1.7.2.min.js" language="JavaScript"></script>
+		<script src="js/jquery.poshytip.min.js" language="JavaScript"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js" language="JavaScript"></script>
+		
+		
+		<script src="js/html2canvas.js" language="JavaScript"></script>
+		<script src="js/jquery.plugin.html2canvas.js" language="JavaScript"></script>
+
+		<script src="js/client.js" language="JavaScript"></script>
+		<script src="js/canvas-toBlob.min.js" language="JavaScript"></script>
+		<script src="js/FileSaver.min.js" language="JavaScript"></script>
+
+		<style>
+
+.selected-attr {
+
+}
+
+.selected-attr dl {
+	padding: 8px 2px;
+	border: 0px solid #fff;
+}
+
+.selected-attr dt,.selected-attr dd,.selected-attr h4 {
+	float: left;
+	display: inline;
+}
+
+.selected-attr dt {
+
+}
+
+.selected-attr dd a,.selected-attr dd .item {
+	float: left;
+	display: inline;
+	height: 15px;
+	line-height: 15px;
+	margin: 3px 5px 2px 0;
+	padding: 0 15px 0 3px;
+	border: 1px solid #ff8040;
+	background: #fff;
+	color: #ff8040;
+	white-space: nowrap;
+}
+
+.selected-attr dd h5 {
+	font-size: 12px;
+	display: inline;
+	font-weight: normal;
+	color: #808080;
+	margin: 0 5px 0 5px;
+}
+
+.selected-attr dd span.item {
+	padding-right: 3px;
+}
+
+.selected-attr dd a .close-icon {
+    position: absolute;
+    width: 14px;
+    height: 13px;
+    background-position: -6px -242px;
+    background-image: url(http://img03.taobaocdn.com/tps/i3/T1ebamXel5XXXXXXXX-20-2400.png);
+    background-repeat: no-repeat;
+    color: #FF8040;
+}
+
+.selected-attr dd a:hover {
+	border: 1px solid #f50;
+	color: #f50;
+	text-decoration: none;
+}
+
+.selected-attr dd a:hover .close-icon {
+	background-position: -6px -223px;
+}
+		</style>
+    </head>
+    <body class="B_index L-zh-cn" style="">
+		$screen_placeholder
+    </body>
+</html>

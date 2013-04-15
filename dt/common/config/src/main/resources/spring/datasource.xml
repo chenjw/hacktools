@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://${mysql.hostname}:${mysql.port}/${mysql.dbname}" />
+		<property name="username" value="${mysql.username}" />
+        <property name="password" value="${mysql.password}" />
+		<!--  property name="url" value="jdbc:mysql://localhost:10000/d5e4485de1b9d43ae8759f553b69b86f2" />
+		<property name="username" value="uIgCrSNfE6U8A" />
+        <property name="password" value="pIzZAgyq48xau" /-->
+        <property name="connectionProperties" value="useUnicode=false;characterEncoding=utf8;characterSetResult=utf8;" />
+        <property name="minIdle" value="5" />
+        <property name="maxIdle" value="32" />
+        <property name="initialSize" value="1" />
+        <property name="maxActive" value="32" />
+        <property name="maxWait" value="60000" />
+        <property name="removeAbandoned" value="true" />
+        <property name="removeAbandonedTimeout" value="180" />
+		<property name="numTestsPerEvictionRun" value="-1" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="180000" />
+	</bean>
+
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="configLocation"> 
+			<bean class="org.springframework.core.io.ClassPathResource"> 
+				<constructor-arg><value>/sqlmap/sqlmap-config.xml</value></constructor-arg> 
+			</bean>
+		</property>
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="lobHandler" ref="lobHandler" />
+	</bean>
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
+	
+	<bean id="baseSqlMapClientDAO" abstract="true">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	
+</beans>
+

@@ -1,0 +1,23 @@
+
+<iframe id="oauth" name="oauth" width="700" height="700" frameborder="0" scrolling="no" src="${oauth_url}"></iframe>
+
+<script>
+	var bakSrc="";
+	$(document).ready(function() {
+		var checkSrc = function() {
+			var src=window.frames["oauth"].location.hash;
+			
+			//if(src!=bakSrc){
+				alert(src);
+				bakSrc=src;
+			//}
+			setTimeout(checkSrc, 10000);
+		}
+		checkSrc();
+
+	});
+
+	
+
+</script>
+	

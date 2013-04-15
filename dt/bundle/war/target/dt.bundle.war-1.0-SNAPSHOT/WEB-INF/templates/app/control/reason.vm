@@ -1,0 +1,28 @@
+<div class="WB_media_expand SW_fun2 S_line1 S_bg1">
+    <div class="WB_arrow">
+        <em class="S_line1_c">◆</em>
+        <span class="S_bg1_c">◆</span>
+    </div>
+    <div>
+        <div class="WB_info">
+            <a class="WB_name S_func3" href="javascript:DT.update({'senderUserId':'$!{reason.user.id}','senderUserName':'$!{reason.user.screenName}'});" title="$!{reason.user.screenName}">
+				#if($reason.user.screenName)
+					@$!{reason.user.screenName}
+				#end
+			</a>
+        </div>
+        <div class="WB_text">
+			$!wbTextUtils.toWbText($!{reason.text})
+        </div>
+		#if($!{reason.thumbnailPic}!="")
+			#parse ("control/reasonMedia.vm")
+		#end
+        <div class="WB_func clearfix">
+            <div class="WB_handle" mid="$!{reason.id}">
+            </div>
+            <div class="WB_from">
+				<div class="S_func2 WB_time">$!dateUtils.toLocaleString($!{reason.createdAt}) </div>
+            </div>
+        </div>
+    </div>
+</div>

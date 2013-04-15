@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>dt.all</artifactId>
+		<groupId>com.chenjw.spider</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.chenjw.spider</groupId>
+	<artifactId>dt.core</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>core</name>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.configuration</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.lang</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.platform.shared</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>jakarta.commons.httpclient</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba.external</groupId>
+			<artifactId>misc.javassist</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.htmlparser</groupId>
+			<artifactId>htmlparser</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/../lib/htmlparser.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.htmlparser</groupId>
+			<artifactId>filterbuilder</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/../lib/filterbuilder.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.htmlparser</groupId>
+			<artifactId>htmllexer</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/../lib/htmllexer.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>com.chenjw</groupId>
+			<artifactId>beancopyutils</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/../lib/beancopyutils-1.0.0.jar</systemPath>
+		</dependency>
+	</dependencies>
+</project>
