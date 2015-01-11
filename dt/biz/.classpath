@@ -1,34 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/main/java"/>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar" sourcepath="M2_REPO/javax/activation/activation/1.1/activation-1.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/chenjw/beancopyutils/1.0.0/beancopyutils-1.0.0.jar"/>
-  <classpathentry kind="src" path="/dt.common.config-1.0-SNAPSHOT"/>
-  <classpathentry kind="src" path="/dt.core-1.0-SNAPSHOT"/>
-  <classpathentry kind="src" path="/dt.weibo-1.0-SNAPSHOT"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/platform/shared/fastjson/1.1.10/fastjson-1.1.10.jar" sourcepath="M2_REPO/com/alibaba/platform/shared/fastjson/1.1.10/fastjson-1.1.10-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/chenjw/external/filterbuilder/1.0.0/filterbuilder-1.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/chenjw/external/htmllexer/1.0.0/htmllexer-1.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/chenjw/external/htmlparser/1.0.0/htmlparser-1.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.codec/0.0.0/jakarta.commons.codec-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.codec/0.0.0/jakarta.commons.codec-0.0.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.collections/0.0.0/jakarta.commons.collections-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.collections/0.0.0/jakarta.commons.collections-0.0.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.configuration/1.5/jakarta.commons.configuration-1.5.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.configuration/1.5/jakarta.commons.configuration-1.5-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.dbcp/1.4/jakarta.commons.dbcp-1.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.httpclient/3.1/jakarta.commons.httpclient-3.1.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.httpclient/3.1/jakarta.commons.httpclient-3.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.io/1.4/jakarta.commons.io-1.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.io/1.4/jakarta.commons.io-1.4-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.lang/2.4/jakarta.commons.lang-2.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.lang/2.4/jakarta.commons.lang-2.4-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.logging/0.0.0/jakarta.commons.logging-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.logging/0.0.0/jakarta.commons.logging-0.0.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.pool/1.4/jakarta.commons.pool-1.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.pool/1.4/jakarta.commons.pool-1.4-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.log4j/1.2.16/jakarta.log4j-1.2.16.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.log4j/1.2.16/jakarta.log4j-1.2.16-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/java.servlet/2.4/java.servlet-2.4.jar" sourcepath="M2_REPO/com/alibaba/external/java.servlet/2.4/java.servlet-2.4-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/jdbc.mysql.mysql-connector/5.1.12/jdbc.mysql.mysql-connector-5.1.12.jar" sourcepath="M2_REPO/com/alibaba/external/jdbc.mysql.mysql-connector/5.1.12/jdbc.mysql.mysql-connector-5.1.12-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.4.3/mail-1.4.3.jar" sourcepath="M2_REPO/javax/mail/mail/1.4.3/mail-1.4.3-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/misc.javassist/3.9.0.GA/misc.javassist-3.9.0.GA.jar" sourcepath="M2_REPO/com/alibaba/external/misc.javassist/3.9.0.GA/misc.javassist-3.9.0.GA-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/objectweb.asm/0.0.0/objectweb.asm-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/objectweb.asm/0.0.0/objectweb.asm-0.0.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/objectweb.asm.attrs/0.0.0/objectweb.asm.attrs-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/objectweb.asm.attrs/0.0.0/objectweb.asm.attrs-0.0.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.cglib/nodep-2.1_3/sourceforge.cglib-nodep-2.1_3.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.cglib/nodep-2.1_3/sourceforge.cglib-nodep-2.1_3-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.ibatis/2.3.0/sourceforge.ibatis-2.3.0.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.ibatis/2.3.0/sourceforge.ibatis-2.3.0-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.spring/2.5.6.SEC02/sourceforge.spring-2.5.6.SEC02.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.spring/2.5.6.SEC02/sourceforge.spring-2.5.6.SEC02-sources.jar"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar" sourcepath="M2_REPO/javax/activation/activation/1.1/activation-1.1-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/chenjw/beancopyutils/1.0.0/beancopyutils-1.0.0.jar"/>
+	<classpathentry kind="src" path="/dt.common.config-1.0-SNAPSHOT"/>
+	<classpathentry kind="src" path="/dt.core-1.0-SNAPSHOT"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/platform/shared/fastjson/1.1.10/fastjson-1.1.10.jar" sourcepath="M2_REPO/com/alibaba/platform/shared/fastjson/1.1.10/fastjson-1.1.10-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/chenjw/external/filterbuilder/1.0.0/filterbuilder-1.0.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/chenjw/external/htmllexer/1.0.0/htmllexer-1.0.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/chenjw/external/htmlparser/1.0.0/htmlparser-1.0.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.codec/0.0.0/jakarta.commons.codec-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.codec/0.0.0/jakarta.commons.codec-0.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.collections/0.0.0/jakarta.commons.collections-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.collections/0.0.0/jakarta.commons.collections-0.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.configuration/1.5/jakarta.commons.configuration-1.5.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.configuration/1.5/jakarta.commons.configuration-1.5-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.dbcp/1.4/jakarta.commons.dbcp-1.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.httpclient/3.1/jakarta.commons.httpclient-3.1.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.httpclient/3.1/jakarta.commons.httpclient-3.1-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.io/1.4/jakarta.commons.io-1.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.io/1.4/jakarta.commons.io-1.4-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.lang/2.4/jakarta.commons.lang-2.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.lang/2.4/jakarta.commons.lang-2.4-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.logging/0.0.0/jakarta.commons.logging-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.logging/0.0.0/jakarta.commons.logging-0.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.commons.pool/1.4/jakarta.commons.pool-1.4.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.commons.pool/1.4/jakarta.commons.pool-1.4-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jakarta.log4j/1.2.16/jakarta.log4j-1.2.16.jar" sourcepath="M2_REPO/com/alibaba/external/jakarta.log4j/1.2.16/jakarta.log4j-1.2.16-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/java.servlet/2.4/java.servlet-2.4.jar" sourcepath="M2_REPO/com/alibaba/external/java.servlet/2.4/java.servlet-2.4-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/jdbc.mysql.mysql-connector/5.1.12/jdbc.mysql.mysql-connector-5.1.12.jar" sourcepath="M2_REPO/com/alibaba/external/jdbc.mysql.mysql-connector/5.1.12/jdbc.mysql.mysql-connector-5.1.12-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/mail/mail/1.4.3/mail-1.4.3.jar" sourcepath="M2_REPO/javax/mail/mail/1.4.3/mail-1.4.3-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/misc.javassist/3.9.0.GA/misc.javassist-3.9.0.GA.jar" sourcepath="M2_REPO/com/alibaba/external/misc.javassist/3.9.0.GA/misc.javassist-3.9.0.GA-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/objectweb.asm/0.0.0/objectweb.asm-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/objectweb.asm/0.0.0/objectweb.asm-0.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/objectweb.asm.attrs/0.0.0/objectweb.asm.attrs-0.0.0.jar" sourcepath="M2_REPO/com/alibaba/external/objectweb.asm.attrs/0.0.0/objectweb.asm.attrs-0.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.cglib/nodep-2.1_3/sourceforge.cglib-nodep-2.1_3.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.cglib/nodep-2.1_3/sourceforge.cglib-nodep-2.1_3-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.ibatis/2.3.0/sourceforge.ibatis-2.3.0.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.ibatis/2.3.0/sourceforge.ibatis-2.3.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/alibaba/external/sourceforge.spring/2.5.6.SEC02/sourceforge.spring-2.5.6.SEC02.jar" sourcepath="M2_REPO/com/alibaba/external/sourceforge.spring/2.5.6.SEC02/sourceforge.spring-2.5.6.SEC02-sources.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
